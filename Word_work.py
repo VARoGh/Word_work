@@ -11,7 +11,6 @@ file_name = 'ПЗ.docx'
 doc = Document(file_name)
 
 for i, paragraph in enumerate(doc.paragraphs):
-
     strings = paragraph.text
     if strings == '':
         continue
@@ -63,10 +62,6 @@ for i, paragraph in enumerate(doc.paragraphs):
     else:
         p_fmt.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
         run_font_size(paragraph, 14)
-
-    # s1 = re.match(r'[0-9]\s\w+', paragraph.text)
-    # s2 = re.match(r'[0-9]\.[0-9]\s\w+', paragraph.text)
-    # s3 = re.match(r'[0-9]\.[0-9]\.[0-9]\s\w+', paragraph.text)
 
     # Настройка заголовков и подзаголовков
     if re.match(r'[0-9]*\s\w+', paragraph.text) \
