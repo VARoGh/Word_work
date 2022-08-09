@@ -39,13 +39,11 @@ for i, paragraph in enumerate(doc.paragraphs):
             run.font.bold = flag
         return True
 
-
     # установка высоты букв Pt(size)
     def run_font_size(par, size):
         for run in par.runs:
             if run.font.size != Pt(size):
                 run.font.size = Pt(size)
-
 
     # форматирование шрифтов
     for run in paragraph.runs:
